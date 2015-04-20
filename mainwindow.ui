@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>3</number>
+    </property>
+    <property name="topMargin">
+     <number>3</number>
+    </property>
+    <property name="rightMargin">
+     <number>3</number>
+    </property>
+    <property name="bottomMargin">
+     <number>3</number>
+    </property>
+    <property name="spacing">
+     <number>3</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="VideoFrame" name="video" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="open">
+    <property name="title">
+     <string>Открыть</string>
+    </property>
+    <addaction name="openFile"/>
+    <addaction name="openURL"/>
+   </widget>
+   <widget class="QMenu" name="settings">
+    <property name="title">
+     <string>Настройки</string>
+    </property>
+    <widget class="QMenu" name="motionTracker">
+     <property name="title">
+      <string>Детектор движения</string>
+     </property>
+     <addaction name="motionTrackerTurn"/>
+     <addaction name="motionTrackerConfig"/>
+    </widget>
+    <addaction name="motionTracker"/>
+   </widget>
+   <addaction name="open"/>
+   <addaction name="settings"/>
+  </widget>
+  <action name="openFile">
+   <property name="text">
+    <string>Открыть файл</string>
+   </property>
+  </action>
+  <action name="openURL">
+   <property name="text">
+    <string>Открыть URL</string>
+   </property>
+  </action>
+  <action name="motionTrackerTurn">
+   <property name="text">
+    <string>Включить</string>
+   </property>
+  </action>
+  <action name="motionTrackerConfig">
+   <property name="text">
+    <string>Настройки</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>VideoFrame</class>
+   <extends>QWidget</extends>
+   <header>videoframe.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
